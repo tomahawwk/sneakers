@@ -1,0 +1,86 @@
+[
+    {
+        "key": 1,
+        "id": 1,
+        "title": "Мужские Кроссовки Nike Blazer Mid Suede",
+        "price":14999,
+        "image": "assets/img/sneakers/1.jpg"
+    },
+    {
+        "key": 2,
+        "id": 2,
+        "title": "Мужские Кроссовки Nike Air Max 270",
+        "price":12999,
+        "image": "assets/img/sneakers/2.jpg"
+    },
+    {
+        "key": 3,
+        "id": 3,
+        "title": "Кроссовки Puma X Aka Boku Future Rider",
+        "price":8999,
+        "image": "assets/img/sneakers/3.jpg"
+    },
+    {
+        "key": 4,
+        "id": 4,
+        "title": "Мужские Кроссовки Under Armour Curry 8",
+        "price":3999,
+        "image": "assets/img/sneakers/4.jpg"
+    },
+    {
+        "key": 5,
+        "id": 5,
+        "title": "Мужские Кроссовки Nike Kyrie 7",
+        "price":16999,
+        "image": "assets/img/sneakers/5.jpg"
+    },
+    {
+        "key": 6,
+        "id": 6,
+        "title": "Мужские Кроссовки Jordan Air Jordan 11",
+        "price":17999,
+        "image": "assets/img/sneakers/6.jpg"
+    },
+    {
+        "key": 7,
+        "id": 7,
+        "title": "Мужские Кроссовки Nike LeBron XVIII",
+        "price":13999,
+        "image": "assets/img/sneakers/7.jpg"
+    },
+    {
+        "key": 8,
+        "id": 8,
+        "title": "Мужские Кроссовки Nike Lebron XVIII Low",
+        "price":11999,
+        "image": "assets/img/sneakers/8.jpg"
+    },
+    {
+        "key": 9,
+        "id": 9,
+        "title": "Кроссовки Puma X Aka Boku Future Rider",
+        "price":14999,
+        "image": "assets/img/sneakers/1.jpg"
+    },
+    {
+        "key": 10,
+        "id": 10,
+        "title": "Мужские Кроссовки Nike Kyrie Flytrap IV",
+        "price":12999,
+        "image": "assets/img/sneakers/2.jpg"
+    },
+    {
+        "key": 11,
+        "id": 11,
+        "title": "Мужские Кроссовки Nike Kyrie 13",
+        "price":8999,
+        "image": "assets/img/sneakers/3.jpg"
+    },
+    {
+        "key": 12,
+        "id": 12,
+        "title": "Мужские Кроссовки Nike Blazer Mid Suede 3",
+        "price":3999,
+        "image": "assets/img/sneakers/4.jpg"
+    }
+]

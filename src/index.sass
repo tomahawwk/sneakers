@@ -1,0 +1,229 @@
+@import "styles/mixins"
+    
+body
+    margin: 0
+    font-family: system-ui
+    -webkit-font-smoothing: antialiasing
+    background-color: #E7F6FF
+    margin: 30px
+    font-size: 14px
+    font-family: "Inter"
+    +scrollbar
+
+*
+    font-family: "Inter"
+
+.wrapper
+    background-color: white
+    margin: 0 auto
+    border-radius: 20px
+    min-height: 90vh
+    max-width: 1280px
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.04)
+
+// Content
+.content
+    padding: 30px 45px
+
+.content__head
+    display: flex
+    justify-content: space-between
+    
+.content__head--inner
+    justify-content: flex-start
+    grid-gap: 20px
+
+.content--empty
+    width: 100%
+    height: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+
+// Cards
+.cards
+    display: grid
+    grid-template-columns: repeat(5, minmax(150px, 1fr))
+    grid-gap: 40px
+    margin-top: 40px
+    
+// Cart
+.cart-list
+    display: grid
+    grid-gap: 20px
+
+.cart-item
+    border-radius: 20px
+    border: 1px solid #F3F3F3
+    padding: 15px
+    display: flex
+    grid-gap: 15px
+    align-items: center
+    img
+        width: 65px
+
+.cart-close
+    min-width: 32px
+    min-height: 32px
+    position: relative
+    transition-duration: .4s
+    opacity: .5
+    &:hover
+        opacity: 1
+    img
+        width: 100%
+        height: 100%
+
+.cart-item__content
+    font-size: 14px
+    display: grid
+    grid-gap: 7px
+
+.cart-item__price
+    font-weight: 600
+
+.cart-total
+    display: grid
+    grid-gap: 25px
+
+.cart-total__item
+    display: flex
+    justify-content: space-between
+    font-size: 16px
+    grid-gap: 10px
+    line-height: .7
+    white-space: nowrap
+    align-items: flex-end
+    p
+        display: flex
+        width: 100%
+        grid-gap: 10px
+        position: relative
+        align-items: flex-end
+        &:after
+            width: 100%
+            content: ''
+            height: 1px
+            border-bottom: 1px dashed #DFDFDF
+
+.button-green
+    position: relative
+    background-color: #9DD458
+    color: white
+    font-weight: 600
+    text-align: center
+    font-size: 16px
+    border-radius: 18px
+    padding: 15px
+    transition-duration: .4s
+    img
+        width: 14px
+        height: 12px
+        position: absolute
+        top: 0
+        transition-duration: inherit
+        bottom: 0
+        left: 21px
+        transform: translateX(0px) rotate(180deg)
+        margin: auto
+    &:hover
+        background-color: lighten(#9DD458, 7%)
+        img
+            transform: translateX(-5px) rotate(180deg)
+    &:disabled
+        background-color: #bebebe
+        pointer-events: none
+        animation: button-loading .9s ease-in-out infinite
+
+// Aside
+
+.aside
+    position: fixed
+    top: 0
+    left: 0
+    width: 100vw
+    height: 100vh
+    display: flex
+    justify-content: flex-end
+    z-index: 1
+
+.aside__close
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-color: rgba(0,0,0,.6)
+    position: absolute
+    transition: .4s cubic-bezier(.785,.135,.15,.86)
+
+.aside__container
+    width: 385px
+    position: relative
+    background-color: white
+    height: 100%
+    box-shadow: -10px 4px 24px rgba(0, 0, 0, 0.1)
+    padding: 30px
+    display: flex
+    grid-gap: 20px
+    flex-direction: column
+    justify-content: space-between
+    transition: .4s cubic-bezier(.785,.135,.15,.86)
+
+.aside__content
+    display: flex
+    flex-direction: column
+    height: 100%
+    
+.aside__title
+    font-size: 24px
+
+.aside__footer
+    display: grid
+    grid-gap: 25px
+    button
+        img
+            transform: rotate(0)
+            left: initial
+            right: 21px
+        &:hover
+            img
+                transform: rotate(0) translateX(5px)
+.aside__head
+    display: flex
+    align-items: center
+    justify-content: space-between
+    grid-gap: 20px
+    z-index: 1
+    margin-bottom: 30px
+
+.aside__inner
+    height: 67vh
+    overflow-y: auto
+    +scrollbar
+
+.aside__state
+    height: 100%
+    display: flex
+    align-items: center
+    position: absolute
+    top: 0
+
+.aside-enter, .aside-leave.aside-leave-active
+    .aside__close
+        opacity: 0
+    .aside__container
+        transform: translateX(100%)
+
+.aside-enter.aside-enter-active 
+    .aside__close
+        opacity: 1
+    .aside__container
+        transform: translateX(0%)
+
+@keyframes button-loading
+    0%
+        opacity: 1
+    50%
+        opacity: 0.7
+    100%
+        opacity: 1
