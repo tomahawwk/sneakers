@@ -32,7 +32,8 @@ const Favorites = () => {
               title="Закладок нет :("
               description="Вы ничего не добавляли в закладки"
               image="/assets/img/empty-favorites.png"
-              buttonText="Вернуться назад"
+              text="Вернуться назад"
+              link="/"
             />
           </div>
         }

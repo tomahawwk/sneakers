@@ -63,7 +63,7 @@ const Aside = ({ onRemove, items = [], opened }) => {
                             title={isOrderComplete ? "Заказ оформлен!" : "Корзина пустая"}
                             description={isOrderComplete ? `Ваш заказ #${orderId} скоро будет передан курьерской доставке` : "Добавьте хотя бы одну пару кроссовок, чтобы сделать заказ."}
                             image={isOrderComplete ? "/assets/img/order-complete.jpg" : "/assets/img/box.png"}
-                            buttonText="Вернуться назад"
+                            text="Вернуться назад"
                             buttonEvent={() => setCartOpened(false)}
                         />
                     </div>

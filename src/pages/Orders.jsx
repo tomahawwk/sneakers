@@ -2,7 +2,6 @@ import React from 'react';
 import axios from 'axios';
 import Card from '../components/Card';
 import Info from '../components/Info'
-import AppContext from '../context';
 
 const Orders = () => {
   const [orderItems, setOrderItems] = React.useState([]);
@@ -22,20 +21,33 @@ const Orders = () => {
   }, [])
 
   return (
-    <div className="content">
-      <div className="content__head">
-        <h1>Мои заказы 1</h1>
+    <>
+      {orderItems.length > 0 ? <div className="content">
+        <div className="content__head">
+          <h1>Мои заказы</h1>
+        </div>
+        <div className="cards">
+          {(isLoading ? [...Array(10)] : orderItems).map((card, index) => 
+            <Card
+              key={index}
+              loading={isLoading}
+              {...card}
+            />
+          )}
+        </div>
       </div>
-      <div className="cards">
-        {(isLoading ? [...Array(10)] : orderItems).map((card, index) => 
-          <Card
-            key={index}
-            loading={isLoading}
-            {...card}
-          />
-        )}
+      :
+      <div className="content--empty">
+        <Info
+          title="У вас нет заказов"
+          description='Вы нищеброд?<br> Оформите хотя бы один заказ.'
+          image="/assets/img/no-orders.png"
+          text="Вернуться назад"
+          link="/"
+        />
       </div>
-    </div>
+    }
+    </>
   )
 };
 
