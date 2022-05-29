@@ -24,7 +24,7 @@ const Orders = () => {
   return (
     <div className="content">
       <div className="content__head">
-        <h1>Мои заказы</h1>
+        <h1>Мои заказы 1</h1>
       </div>
       <div className="cards">
         {(isLoading ? [...Array(10)] : orderItems).map((card, index) => 
